@@ -1,0 +1,115 @@
+@import "reset";
+@import "variable";
+@import "mixins";
+
+nav {
+  background-color: $primary-blue;
+  position: sticky;
+  top: 0;
+  .flex-container {
+    @include flex-container;
+    @include mq(560px) {
+      display: block;
+    }
+    align-items: stretch;
+  }
+}
+
+.navbar-brand {
+  margin: 0;
+  padding: 10px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  h1 {
+    @include mq(560px) {
+      display: inline;
+    }
+  }
+}
+
+.responsive-nav {
+  @include mq(560px) {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .brand {
+    display: flex;
+    justify-content: space-between;
+  }
+  .opened {
+    max-height: 200px;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    @include mq(560px) {
+      flex-direction: column;
+    }
+    li {
+      display: flex;
+      padding: 0px 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include mq(560px) {
+        flex-direction: column;
+        padding: 10px 0px;
+      }
+    }
+    :hover {
+      background-color: darken($primary-blue, $amount: 25);
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  @include mq(560px) {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+
+.icon {
+  display: none;
+  text-decoration: none;
+  color: white;
+  @include mq(560px) {
+    display: block;
+    float: right;
+    align-self: center;
+  }
+}
+
+.active {
+  background-color: darken($primary-blue, $amount: 30);
+}
+
+.container {
+  width: 80%;
+  margin: auto auto;
+  @include mq(560px) {
+    width: 95%;
+  }
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
