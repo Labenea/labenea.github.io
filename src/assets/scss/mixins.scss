@@ -7,3 +7,7 @@
 @mixin flex-container {
   display: flex;
 }
+
+@mixin text-anim {
+  opacity: 0;
+}
