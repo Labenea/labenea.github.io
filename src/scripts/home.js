@@ -14,7 +14,7 @@ function fadeOnScroll() {
   window.addEventListener("scroll", () => {
     var curScroll = window.pageYOffset;
     if (curScroll <= Jpos) {
-      opacity = 1 - (curScroll / Jpos) * 1.2;
+      opacity = 1 - curScroll / Jpos;
       console.log(opacity);
     }
     Jtext.style.opacity = opacity;
