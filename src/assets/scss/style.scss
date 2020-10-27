@@ -6,6 +6,7 @@ nav {
   background-color: $primary-blue;
   position: sticky;
   top: 0;
+  z-index: 3;
   .flex-container {
     @include flex-container;
     @include mq(560px) {
@@ -139,7 +140,7 @@ nav {
   }
   .appear {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     transition: 0.5s all ease-in-out;
   }
 }
