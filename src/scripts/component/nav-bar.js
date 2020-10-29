@@ -26,7 +26,7 @@ class NavBar extends HTMLElement {
             }"><a href="/covid-monitor.html">Covid Monitor</a></li>
             <li class="${
               current == "about.html" ? "active" : ""
-            }"><a href="/about.html">About</a></li>
+            }"><a href="/about.html">About Me</a></li>
             </ul>
           </div>
         </div>

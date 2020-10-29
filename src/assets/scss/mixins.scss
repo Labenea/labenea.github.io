@@ -9,6 +9,10 @@
 }
 
 @mixin text-anim {
-  transform: translateY(-20px);
+  transform: translateY(20px);
+  opacity: 0;
+}
+@mixin card-anim {
+  transform: translateY(20px);
   opacity: 0;
 }
