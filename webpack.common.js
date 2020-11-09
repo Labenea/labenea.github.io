@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const loader = require("sass-loader");
 
 module.exports = {
   entry: "./src/app.js",
@@ -22,6 +23,15 @@ module.exports = {
             loader: "sass-loader",
           },
         ],
+      },
+      {
+        test: /\.css$/,
+        use:[
+          "style-loader", "css-loader"
+           
+
+
+        ]
       },
     ],
   },

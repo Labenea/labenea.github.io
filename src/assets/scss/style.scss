@@ -17,6 +17,9 @@ nav {
   transition: box-shadow 0.5s;
   box-shadow: none;
 }
+footer {
+  background-color: $primary-blue;
+}
 
 .navbar-brand {
   margin: 0;
@@ -120,12 +123,9 @@ nav {
 }
 
 #jumbotron {
-  background-color: $primary-blue;
-  height: 60vh;
-  color: #fff;
-  line-height: 1;
-  display: flex;
+  @include blue-back;
   align-items: center;
+  height: 60vh;
   h1 {
     margin: 0;
     font-size: 4rem;
@@ -214,4 +214,40 @@ nav {
     text-align: center;
     font-weight: 300;
   }
+}
+#personal {
+  @include blue-back;
+  flex-direction: column;
+
+  .size1 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 2em;
+  }
+  p {
+    line-height: 1.9;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .buttonc {
+    text-align: center;
+  }
+}
+.button {
+  &:hover {
+    color: $primary-blue;
+    background-color: white;
+  }
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 700;
+  border: solid 2px whitesmoke;
+  transition: all 0.5s;
 }

@@ -16,3 +16,9 @@
   transform: translateY(20px);
   opacity: 0;
 }
+@mixin blue-back {
+  background-color: $primary-blue;
+  color: #fff;
+  line-height: 1;
+  display: flex;
+}
