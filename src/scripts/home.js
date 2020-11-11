@@ -1,4 +1,3 @@
-
 function scrollFunction() {
   var navbar = document.querySelector("#navBar");
   var navpos = navbar.getBoundingClientRect().top;

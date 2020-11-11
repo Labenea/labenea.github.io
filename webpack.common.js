@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const loader = require("sass-loader");
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: { main: "./src/app.js", covid: "./src/covidapp.js" },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [
@@ -26,12 +26,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use:[
-          "style-loader", "css-loader"
-           
-
-
-        ]
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

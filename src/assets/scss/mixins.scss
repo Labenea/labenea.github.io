@@ -22,3 +22,9 @@
   line-height: 1;
   display: flex;
 }
+@mixin card {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 10px;
+}
