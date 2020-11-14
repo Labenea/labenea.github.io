@@ -237,17 +237,10 @@ glb-card {
     margin-left: auto;
     margin-right: auto;
   }
-  h1 {
-    text-align: center;
-    margin-top: 2em;
-  }
-  p {
-    line-height: 1.9;
-    font-size: 1.2rem;
-    text-align: center;
-  }
   .buttonc {
+    margin-top: 3em;
     text-align: center;
+    margin-bottom: 2em;
   }
 }
 .button {
@@ -258,8 +251,9 @@ glb-card {
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  font-size: 1.5rem;
   color: white;
-  padding: 8px 15px;
+  padding: 10px 100px;
   font-weight: 700;
   border: solid 2px whitesmoke;
   transition: all 0.5s;
@@ -272,6 +266,10 @@ glb-card {
   @include mq(560px) {
     flex-direction: column;
   }
+}
+.h-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 .w-100 {
   width: 100%;
@@ -332,4 +330,47 @@ glb-card {
   @include mq(560px) {
     margin-top: 10px;
   }
+}
+
+c-footer {
+  .f-container {
+    margin-top: 0px;
+    background-color: $primary-blue;
+    height: 150px;
+    p {
+      color: #fff;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+  .f-icon {
+    img {
+      margin: 8px 8px;
+      height: 45px;
+      width: auto;
+    }
+  }
+}
+
+.text-danger {
+  color: $danger;
+}
+.text-success {
+  color: $success;
+}
+.text-warning {
+  color: $warning;
+}
+
+.text-danger-darken {
+  $color: $danger;
+  color: darken($color, $amount: 20);
+}
+.text-success-darken {
+  $color: $success;
+  color: darken($color, $amount: 30);
+}
+.text-warning-darken {
+  $color: $warning;
+  color: darken($color, $amount: 20);
 }

@@ -33,20 +33,20 @@ class IdnCard extends HTMLElement {
             <div class=" container responsive-flex d-flex justify-space-between flex-warp ">
                 <div class="c-card">
                     <div class="loader animate"></div>
-                        <h1>0</h1>
-                        <p>0</p>
+                        <h1 class="text-warning" >0</h1>
+                        <p  class="text-warning-darken">0</p>
                         <h5>Confirmed</h5>
                 </div>
                 <div class="c-card">       
                 <div class="loader animate"></div>       
-                        <h1>0</h1>
-                        <p>0</p>
+                        <h1 class="text-success">0</h1>
+                        <p class="text-success-darken">0</p>
                         <h5>Recovered</h5>            
                 </div>
                 <div class="c-card">     
                 <div class="loader animate"></div>
-                        <h1>0</h1>
-                        <p>0</p>
+                        <h1 class="text-danger">0</h1>
+                        <p class="text-danger-darken">0</p>
                         <h5>Deaths</h5>
                 </div>
             </div>
@@ -59,26 +59,32 @@ class IdnCard extends HTMLElement {
       <div class=" container responsive-flex d-flex justify-space-between flex-warp ">
           <div class="c-card">
               <div class="loader "></div>
-                  <h1>${new Intl.NumberFormat("ID-IN").format(
-                    data.confirmed
-                  )}</h1>
-                  <p>+${new Intl.NumberFormat("ID-IN").format(
-                    data.lastConfirmed
-                  )}</p>
+                  <h1 class="text-warning">${new Intl.NumberFormat(
+                    "ID-IN"
+                  ).format(data.confirmed)}</h1>
+                  <p class="text-warning-darken">+${new Intl.NumberFormat(
+                    "ID-IN"
+                  ).format(data.lastConfirmed)}</p>
                   <h5>Confirmed</h5>
           </div>
           <div class="c-card">       
           <div class="loader "></div>       
-                  <h1>${new Intl.NumberFormat("ID-IN").format(
-                    data.recovered
-                  )}</h1>
-                  <p>${Math.round((data.recovered / data.confirmed) * 100)}%</p>
+                  <h1 class="text-success">${new Intl.NumberFormat(
+                    "ID-IN"
+                  ).format(data.recovered)}</h1>
+                  <p class="text-success-darken">${Math.round(
+                    (data.recovered / data.confirmed) * 100
+                  )}%</p>
                   <h5>Recovered</h5>            
           </div>
           <div class="c-card">     
           <div class="loader "></div>
-                  <h1>${new Intl.NumberFormat("ID-IN").format(data.deaths)}</h1>
-                  <p>${Math.round((data.deaths / data.confirmed) * 100)}%</p>
+                  <h1 class="text-danger">${new Intl.NumberFormat(
+                    "ID-IN"
+                  ).format(data.deaths)}</h1>
+                  <p class="text-danger-darken">${Math.round(
+                    (data.deaths / data.confirmed) * 100
+                  )}%</p>
                   <h5>Deaths</h5>
           </div>
       </div>
