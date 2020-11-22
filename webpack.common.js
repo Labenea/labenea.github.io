@@ -39,9 +39,5 @@ module.exports = {
       template: "./src/pages/covid-monitor.html",
       filename: "covid-monitor.html",
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/about.html",
-      filename: "about.html",
-    }),
   ],
 };
