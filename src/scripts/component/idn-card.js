@@ -55,6 +55,10 @@ class IdnCard extends HTMLElement {
   render() {
     this.innerHTML = `
       <h1 >INDONESIA CASES</h1>
+      <p class="ds">
+          Data sources from
+          <a href="https://github.com/mathdroid/covid-19-api">mathdroid</a> API
+        </p>
       <p> Last Updated : ${data.lastUpdate}</p>
       <div class=" container responsive-flex d-flex justify-space-between flex-warp ">
           <div class="c-card">

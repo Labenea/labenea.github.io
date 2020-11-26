@@ -41,4 +41,11 @@
     text-align: center;
     color: darken($primary-blue, $amount: 20);
   }
+  .ds {
+    color: rgb(33, 43, 54);
+    a {
+      color: darken($primary-blue, $amount: 20);
+      text-decoration: none;
+    }
+  }
 }
